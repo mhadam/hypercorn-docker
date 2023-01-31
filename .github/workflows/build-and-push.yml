@@ -48,4 +48,4 @@ jobs:
                 context: ./images
                 file: ./images/${{ matrix.image.name }}.dockerfile
                 push: true
-                tags: mhadam/hypercorn:${{ (matrix.image.docker_tag == 'latest' && 'latest') || ${{matrix.image.docker_tag}}-${{github.ref_name}} }}
+                tags: mhadam/hypercorn:${{ (matrix.image.docker_tag == 'latest' && 'latest') || format('{0}-{1}', matrix.image.docker_tag, github.ref_name) }}
