@@ -14,12 +14,15 @@ jobs:
     strategy:
       matrix:
         image:
-          - name: python3.11
-            python_version: "3.11"
-          - name: python3.11-slim
-            python_version: "3.11"
-          - name: python3.11-alpine
-            python_version: "3.11"
+            - name: python3.11
+              docker_tag: latest
+              python_version: "3.11"
+            - name: python3.11-slim
+              docker_tag: 3.11-slim
+              python_version: "3.11"
+            - name: python3.11-alpine
+              docker_tag: 3.11-alpine
+              python_version: "3.11"
       fail-fast: true
     runs-on: ubuntu-latest
     steps:
@@ -45,4 +48,4 @@ jobs:
                 context: ./images
                 file: ./images/${{ matrix.image.name }}.dockerfile
                 push: true
-                tags: mhadam/hypercorn:${{ (github.ref_name == 'main' && 'latest') || github.ref_name }}
+                tags: mhadam/hypercorn:${{ (matrix.image.docker_tag == 'latest' && 'latest') || ${{matrix.image.docker_tag}}-${{github.ref_name}} }}
