@@ -2,7 +2,7 @@
 
 set -e
 
-tag="bynect/hypercorn-fastapi:$NAME"
+tag="mhadam/hypercorn:$NAME"
 
 bash scripts/docker-build.sh
 bash scripts/docker-login.sh

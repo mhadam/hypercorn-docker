@@ -1,8 +1,8 @@
-FROM python:3.8-slim
+FROM python:3.11-slim
 
-LABEL author="bynect <bynect@gmail.com>"
+LABEL author="mhadam <michael@hadam.us>"
 
-RUN python3 -m pip install hypercorn hypercorn[uvloop] hypercorn[trio] trio aioquic hypercorn[h3] fastapi \
+RUN python3 -m pip install hypercorn hypercorn[uvloop] aioquic hypercorn[h3] \
     --no-cache-dir --no-color --no-python-version-warning --disable-pip-version-check
 
 COPY ./start.sh /start.sh

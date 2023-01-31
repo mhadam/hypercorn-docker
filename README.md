@@ -1,21 +1,6 @@
+# **hypercorn-docker**
 
-[![Deploy](https://github.com/bynect/hypercorn-fastapi/workflows/Deploy/badge.svg?branch=main)](https://github.com/bynect/hypercorn-fastapi-docker/actions?query=workflow%3ADeploy)
-
-## Image tags and Dockerfiles
-
-* [`python3.9`, `latest`](images/python3.9.dockerfile) (**[*](#python-39-support)**)
-* [`python3.9-slim`](images/python3.9-slim.dockerfile) (**[*](#python-39-support)**)
-* [`python3.9-alpine`](images/python3.9-alpine.dockerfile) (**[*](#python-39-support)**)
-* [`python3.8`](images/python3.8.dockerfile)
-* [`python3.8-slim`](images/python3.8-slim.dockerfile)
-* [`python3.8-alpine`](images/python3.8-alpine.dockerfile)
-* [`python3.7`](images/python3.7.dockerfile)
-* [`python3.7-slim`](images/python3.7-slim.dockerfile)
-* [`python3.7-alpine`](images/python3.7-alpine.dockerfile)
-
-# **hypercorn-fastapi-docker**
-
-Docker image with [Hypercorn][hypercorn site] for [FastAPI][fastapi site] application in Python 3.7+. With slim and alpine options.
+A Docker image with [Hypercorn][hypercorn site], available in slim and alpine versions.
 
 * **[Github repo][github repo]**
 * **[Docker hub][docker repo]**
@@ -575,13 +560,8 @@ Python 3.9 is now supported, but some optional packages are not installed due to
 Incompatible packages:
 * `trio` (`hypercorn[trio]`)
 
-## License
-Licensed under MIT License.
-
-Based on [tiangolo/uvicorn-gunicorn-docker](https://github.com/tiangolo/uvicorn-gunicorn-docker)
-
-[docker tags]: https://hub.docker.com/repository/docker/bynect/hypercorn-fastapi/tags
-[docker repo]: https://hub.docker.com/repository/docker/bynect/hypercorn-fastapi
-[github repo]: https://github.com/bynect/hypercorn-fastapi-docker
+[docker tags]: https://hub.docker.com/repository/docker/mhadam/hypercorn/tags
+[docker repo]: https://hub.docker.com/repository/docker/mhadam/hypercorn
+[github repo]: https://github.com/mhadam/hypercorn-docker
 [fastapi site]: https://fastapi.tiangolo.com/
 [hypercorn site]: https://pgjones.gitlab.io/hypercorn/

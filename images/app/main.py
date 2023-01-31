@@ -1,9 +1,15 @@
-import sys
-from fastapi import FastAPI
-
-app = FastAPI()
-version = "{0}.{1}".format(sys.version_info.major, sys.version_info.minor)
-
-@app.get("/")
-async def index():
-    return "Hello, World. From a FastAPI app running on Hypercorn and Python {}.".format(version)
+async def app(scope, receive, send):
+    await send({
+        'type': 'http.response.start',
+        'status': 200,
+        'headers': [
+            [b'content-type', b'text/plain'],
+        ]
+    })
+    await send({
+        'type': 'http.response.body',
+        'body': b'You\'ve got the "mhadam/hypercorn" Docker image running and this is the demo app.' +
+                b'\n\n'
+                b'To run your own app: overwrite /app/main.py, ' +
+                b'or manually set APP_MODULE or some combo of MODULE_NAME and VARIABLE_NAME.',
+    })

@@ -1,11 +1,11 @@
-FROM python:3.9-alpine
+FROM python:3.11-alpine
 
-LABEL author="bynect <bynect@gmail.com>"
+LABEL author="mhadam <michael@hadam.us>"
 
 RUN apk add --no-cache --virtual .build-deps gcc libc-dev libffi-dev openssl-dev \
     build-base bsd-compat-headers make musl-dev python3-dev cargo \
     && python3 -m pip install --upgrade pip \
-    && python3 -m pip install hypercorn hypercorn[uvloop] aioquic hypercorn[h3] fastapi \
+    && python3 -m pip install hypercorn hypercorn[uvloop] aioquic hypercorn[h3] \
     --no-cache-dir --no-color --no-python-version-warning --disable-pip-version-check \
     && apk del .build-deps gcc libc-dev make
 

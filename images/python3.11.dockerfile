@@ -1,8 +1,8 @@
-FROM python:3.7-slim
+FROM python:3.11
 
-LABEL author="bynect <bynect@gmail.com>"
+LABEL author="mhadam <michael@hadam.us>"
 
-RUN python3 -m pip install hypercorn hypercorn[uvloop] hypercorn[trio] trio aioquic hypercorn[h3] fastapi \
+RUN python3 -m pip install hypercorn[h3,uvloop] aioquic \
     --no-cache-dir --no-color --no-python-version-warning --disable-pip-version-check
 
 COPY ./start.sh /start.sh
@@ -10,8 +10,6 @@ RUN chmod +x /start.sh
 
 COPY ./start-reload.sh /start-reload.sh
 RUN chmod +x /start-reload.sh
-
-COPY ./hypercorn_conf.py /hypercorn_conf.py
 
 COPY ./app /app
 
