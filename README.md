@@ -6,7 +6,7 @@ A Docker image with [Hypercorn][hypercorn site], available in slim and alpine ve
 * **[Docker hub][docker repo]**
 
 ## Hypercorn
-**[Hypercorn][hypercorn site]** is an HTTP2 ready ASGI web server based on the sans-io hyper, h11, h2, and wsproto libraries and inspired by Gunicorn.
+**[Hypercorn][hypercorn site]** is an HTTP2-ready ASGI web server based on the [sans I/O][sans] hyper, h11, h2, and wsproto libraries and inspired by Gunicorn.
 
 Hypercorn supports HTTP/1, HTTP/2, WebSockets (over HTTP/1 and HTTP/2), ASGI/2, and ASGI/3 specifications. Hypercorn can utilise asyncio, uvloop, or trio worker types.
 
@@ -565,3 +565,4 @@ Incompatible packages:
 [github repo]: https://github.com/mhadam/hypercorn-docker
 [fastapi site]: https://fastapi.tiangolo.com/
 [hypercorn site]: https://hypercorn.readthedocs.io/en/latest/
+[sans]: https://sans-io.readthedocs.io
