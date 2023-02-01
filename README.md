@@ -564,4 +564,4 @@ Incompatible packages:
 [docker repo]: https://hub.docker.com/r/mhadam/hypercorn
 [github repo]: https://github.com/mhadam/hypercorn-docker
 [fastapi site]: https://fastapi.tiangolo.com/
-[hypercorn site]: https://pgjones.gitlab.io/hypercorn/
+[hypercorn site]: https://hypercorn.readthedocs.io/en/latest/
