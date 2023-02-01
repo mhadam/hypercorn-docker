@@ -17,14 +17,14 @@ group "default" {
 target "alpine" {
   dockerfile = "python${PYTHON_VERSION}-alpine.dockerfile"
   tags = [
-    notequal("",TAG) ? "mhadam/hypercorn:${PYTHON_VERSION}-alpine-${TAG}": "mhadam/hypercorn:${PYTHON_VERSION}-alpine",
+    notequal("",TAG) ? "mhadam/hypercorn:python${PYTHON_VERSION}-alpine-${TAG}": "mhadam/hypercorn:python${PYTHON_VERSION}-alpine",
   ]
 }
 
 target "slim" {
   dockerfile = "python${PYTHON_VERSION}-slim.dockerfile"
   tags = [
-    notequal("",TAG) ? "mhadam/hypercorn:${PYTHON_VERSION}-slim-${TAG}": "mhadam/hypercorn:${PYTHON_VERSION}-slim",
+    notequal("",TAG) ? "mhadam/hypercorn:python${PYTHON_VERSION}-slim-${TAG}": "mhadam/hypercorn:python${PYTHON_VERSION}-slim",
     IS_LATEST ? "mhadam/hypercorn:latest": "",
   ]
 }
@@ -32,6 +32,6 @@ target "slim" {
 target "python" {
   dockerfile = "python${PYTHON_VERSION}.dockerfile"
   tags = [
-    notequal("",TAG) ? "mhadam/hypercorn:${PYTHON_VERSION}-python-${TAG}": "mhadam/hypercorn:${PYTHON_VERSION}-python",
+    notequal("",TAG) ? "mhadam/hypercorn:python${PYTHON_VERSION}-python-${TAG}": "mhadam/hypercorn:python${PYTHON_VERSION}-python",
   ]
 }
