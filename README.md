@@ -560,8 +560,8 @@ Python 3.9 is now supported, but some optional packages are not installed due to
 Incompatible packages:
 * `trio` (`hypercorn[trio]`)
 
-[docker tags]: https://hub.docker.com/repository/docker/mhadam/hypercorn/tags
-[docker repo]: https://hub.docker.com/repository/docker/mhadam/hypercorn
+[docker tags]: https://hub.docker.com/r/mhadam/hypercorn/tags
+[docker repo]: https://hub.docker.com/r/mhadam/hypercorn
 [github repo]: https://github.com/mhadam/hypercorn-docker
 [fastapi site]: https://fastapi.tiangolo.com/
 [hypercorn site]: https://pgjones.gitlab.io/hypercorn/
