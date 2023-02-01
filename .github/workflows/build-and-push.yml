@@ -36,5 +36,5 @@ jobs:
                 TAG: ""
             with:
                 push: true
-                files:
-                    - 'images/docker-bake.hcl'
+                files: |
+                    'images/docker-bake.hcl'
