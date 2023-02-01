@@ -37,4 +37,4 @@ jobs:
             with:
                 push: true
                 files: |
-                    '${{ github.workspace }}/images/docker-bake.hcl'
+                    './images/docker-bake.hcl'
