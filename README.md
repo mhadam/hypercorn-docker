@@ -10,7 +10,9 @@ A Docker image with [Hypercorn][hypercorn site], available in slim and alpine ve
 Hypercorn supports HTTP/1, HTTP/2, WebSockets (over HTTP/1 and HTTP/2), ASGI/2, and ASGI/3 specifications. Hypercorn can utilise asyncio, uvloop, or trio worker types.
 
 ## How to start
-You can use this image as a base image for other images, using this in your Dockerfile:
+This can be used as a base image. In this example we haven't changed the `PYTHONPATH`, which will by default contain `/app`.
+
+When we copy `/app`, we've got a module `myproject` with a package called `asgi` and there's a function within `asgi` called `application`:
 
 ```dockerfile
 FROM mhadam/hypercorn:python3.11-slim
@@ -20,7 +22,7 @@ COPY ./app /app
 ENTRYPOINT ["hypercorn", "myproject.asgi:application"]
 ```
 
-Then you can build you Dockerfile, e.g:
+Then build your Dockerfile:
 ```sh
 $ docker build -t myimage ./
 ```
