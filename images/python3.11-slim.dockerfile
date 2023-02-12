@@ -15,10 +15,11 @@ RUN chmod +x /start.sh
 COPY ./start-reload.sh /start-reload.sh
 RUN chmod +x /start-reload.sh
 
+COPY ./hypercorn /hypercorn
 COPY ./app /app
 
 WORKDIR /app
-ENV PYTHONPATH=/app
+ENV PYTHONPATH=/hypercorn:/app
 
 EXPOSE 80
 EXPOSE 443
