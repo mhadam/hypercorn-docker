@@ -1,7 +1,7 @@
 import os
 import multiprocessing
 import json
-from images.hypercorn.hypercorn_conf import booleanize
+from images.hypercorn.hypercorn.hypercorn_conf import booleanize
 
 # ssl opts
 use_ssl = booleanize(os.getenv("USE_SSL", "False"))
