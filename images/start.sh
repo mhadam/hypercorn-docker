@@ -14,14 +14,14 @@ MODULE_NAME=${MODULE_NAME:-$DEFAULT_MODULE_NAME}
 VARIABLE_NAME=${VARIABLE_NAME:-app}
 export APP_MODULE=${APP_MODULE:-"$MODULE_NAME:$VARIABLE_NAME"}
 
-if [ -f /hypercorn/hypercorn_conf/hypercorn_conf.py ]
+if [ -f /hypercorn/hypercorn_conf/config.py ]
 then
-    DEFAULT_CONF=file:hypercorn/hypercorn_conf/hypercorn_conf.py
+    DEFAULT_CONF=file:/hypercorn/hypercorn_conf/config.py
 elif [ -f /app/hypercorn_conf.py ]
 then
-    DEFAULT_CONF=file:app/hypercorn_conf.py
+    DEFAULT_CONF=file:/app/hypercorn_conf.py
 else
-    DEFAULT_CONF=file:hypercorn_conf.py
+    DEFAULT_CONF=file:/hypercorn_conf.py
 fi
 
 export HYPERCORN_CONF=${HYPERCORN_CONF:-$DEFAULT_CONF}
