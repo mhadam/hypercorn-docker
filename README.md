@@ -45,7 +45,7 @@ $ docker build -t myimage .
 
 ### Docker Compose
 
-Here I'd like to explain what this image looks like, in practice, as a Docker Compose service. Really the only take-away here should be how we're able to use the bind mount declared under `volume:` in order for the image to load our application without copying the files. This effectively overwrites the demo files that are in the `app` directory by default.
+Here I'd like to explain what this image looks like, in practice, as a Docker Compose service. Really the only takeaway here should be how we're able to use the bind mount declared under `volume:` in order for the image to load our application without copying the files. This effectively overwrites the demo files that are in the `app` directory by default.
 
 Let's assume our project repo folder is `code_repo`, which contains the package `myproject` and submodule `asgi` with callable `application`.
 
