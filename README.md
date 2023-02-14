@@ -12,7 +12,7 @@ Hypercorn supports HTTP/1, HTTP/2, WebSockets (over HTTP/1 and HTTP/2), ASGI/2, 
 ## How to start
 This can be used as a base image. In this example we haven't changed the `PYTHONPATH`, which will by default contain `/app`.
 
-When we copy `/app`, we've got a module `myproject` with a package called `asgi` and there's a function within `asgi` called `application`:
+When we copy `/app`, we've got a package `myproject` that has a module called `asgi` and there's a function within `asgi` called `application`:
 
 ```dockerfile
 FROM mhadam/hypercorn:python3.11-slim
