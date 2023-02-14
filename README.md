@@ -15,7 +15,7 @@ By default, this image sets `PYTHONPATH=/app:/hypercorn`.
 
 This means that Python will search in `/app` and `/hypercorn` for modules & packages.
 
-`/hypercorn` shouldn't be overwritten. The design of this image uses the two paths `app` and `hypercorn` since this allows you to bind mount to `app` without overwriting the default hypercorn configuration.
+`/hypercorn` shouldn't be overwritten. By design, this image uses the two paths `app` and `hypercorn` since this allows you to bind mount to `app` without overwriting the default hypercorn configuration.
 
 
 
